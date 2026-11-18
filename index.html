@@ -1,0 +1,2061 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syed Agency — Digital & Motion Studio</title>
+    <meta name="description" content="Syed Agency — independent digital & motion studio. From vision to product, built through real process." />
+    <meta property="og:title" content="Syed Agency — Digital & Motion Studio" />
+    <meta property="og:description" content="Syed Agency — independent digital & motion studio. From vision to product, built through real process." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" crossorigin />
+    <link rel="preload" as="image" href="https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261118_061436_77e1a13d-60a0-4746-bf7b-53b2365609f5.png&amp;w=900&amp;q=85" />
+    <link rel="preload" as="image" href="https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261118_061435_8a1828bc-a149-44ea-80fd-c4c33eef7407.png&amp;w=900&amp;q=85" />
+    <link rel="preload" as="image" href="https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261118_061547_979f8673-f904-4102-90a0-6458bce33bc8.png&amp;w=1200&amp;q=85" />
+    <style>
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url('https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+FEFF, U+FFFD;
+      }
+
+      :root {
+        --bg: #F1ECEA;
+        --ink: #1F2430;
+        --muted: #938B90;
+        --dark: #12141B;
+        --sky1: #C0C9D9;
+        --sky2: #EFCEBE;
+        --peach: #DDAD95;
+        --lavender: #B0AEC6;
+        --harbour: #7DA3BB;
+        --sand: #EBC9AE;
+        --rose: #BF9FA5;
+        --slate: #4C6165;
+        --ice: #BAD9E6;
+        --sub: #5B5A62;
+        --sky-grey: #8D8893;
+        --man-grey: #6E7180;
+        --cta-hover: #2E3546;
+
+        --u: 1px;
+        --n: 1;
+        --hfs: 106px;
+        --ic: 66px;
+        --pfs: 48px;
+        --sfs: 60px;
+        --mfs: 72px;
+        --camw: 274px;
+      }
+
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: 'Inter', system-ui, -apple-system, "Segoe UI", sans-serif;
+        font-weight: 500;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: clip;
+      }
+
+      a, button {
+        font-family: inherit;
+      }
+
+      /* Fixed navigation */
+      .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        height: calc(var(--n) * 86px);
+        padding: 0 calc(var(--n) * 40px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        pointer-events: none;
+      }
+
+      .nav > * {
+        pointer-events: auto;
+      }
+
+      .nav-logo {
+        width: calc(var(--n) * 46px);
+        height: calc(var(--n) * 46px);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--ink);
+        text-decoration: none;
+        opacity: 0;
+        transition: color 0.25s ease;
+        flex-shrink: 0;
+      }
+
+      .nav-logo svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--n) * 28px);
+      }
+
+      .nav-link {
+        font-size: calc(var(--n) * 15px);
+        font-weight: 400;
+        letter-spacing: -0.005em;
+        color: var(--muted);
+        text-decoration: none;
+        white-space: nowrap;
+        opacity: 0;
+        transform: translateY(6px);
+        transition: color 0.2s ease;
+      }
+
+      .nav-link:hover,
+      .nav-link.is-current {
+        color: var(--ink);
+      }
+
+      .nav-cta {
+        height: calc(var(--n) * 42px);
+        padding: 0 calc(var(--n) * 16px) 0 calc(var(--n) * 20px);
+        border-radius: calc(var(--n) * 12px);
+        background: var(--ink);
+        color: var(--bg);
+        font-size: calc(var(--n) * 15px);
+        font-weight: 500;
+        border: 0;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: calc(var(--n) * 8px);
+        white-space: nowrap;
+        flex-shrink: 0;
+        text-decoration: none;
+        clip-path: inset(0 0 0 100% round calc(var(--n) * 12px));
+        transition: background-color 0.2s ease, color 0.25s ease;
+      }
+
+      .nav-cta:hover {
+        background: var(--cta-hover);
+      }
+
+      .nav-cta svg,
+      .process-cta svg {
+        display: block;
+        flex-shrink: 0;
+      }
+
+      .nav-cta svg {
+        width: calc(var(--n) * 16px);
+        height: calc(var(--n) * 16px);
+      }
+
+      body.dark-nav .nav-logo {
+        color: #FFFFFF;
+      }
+
+      body.dark-nav .nav-link {
+        color: #8C8F9A;
+      }
+
+      body.dark-nav .nav-link:hover,
+      body.dark-nav .nav-link.is-current {
+        color: #FFFFFF;
+      }
+
+      body.dark-nav .nav-cta {
+        background: #FFFFFF;
+        color: var(--ink);
+      }
+
+      body.dark-nav .nav-cta:hover {
+        background: #EAE8EC;
+      }
+
+      @media (max-width: 819px) {
+        .nav-links {
+          display: none;
+        }
+      }
+
+      /* Story section */
+      #story {
+        position: relative;
+        height: 760vh;
+        background: var(--bg);
+      }
+
+      /* Hero header scrolls away 1:1 with page */
+      .hero {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        height: 100svh;
+        z-index: 9;
+        pointer-events: none;
+        will-change: transform;
+      }
+
+      .hero-headline {
+        position: absolute;
+        top: 41%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        font-size: var(--hfs);
+        font-weight: 560;
+        letter-spacing: -0.035em;
+        line-height: 1.24;
+        color: var(--ink);
+        margin: 0;
+      }
+
+      .hero-words {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-50%);
+        white-space: nowrap;
+        will-change: transform;
+      }
+
+      .hero-char {
+        display: inline-block;
+        white-space: pre;
+        clip-path: inset(0 100% 0 0);
+      }
+
+      .hero-icons {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+      }
+
+      .hero-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: var(--ic);
+        height: var(--ic);
+        margin-top: calc(var(--ic) * -0.5);
+        opacity: 0;
+        transform-origin: center center;
+        will-change: transform, opacity, filter;
+      }
+
+      .hero-icon svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .paper-plane {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(var(--u) * 62);
+        aspect-ratio: 0.297 / 0.203;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transform-origin: center center;
+        will-change: transform, opacity;
+      }
+
+      /* Pinned stage */
+      .stage {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        height: 100svh;
+        overflow: hidden;
+        background: var(--bg);
+      }
+
+      /* Cards layer */
+      .cards {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(var(--cw) * 1px);
+        height: calc(var(--cw) * 1.32px);
+        margin-left: calc(var(--cw) * -0.5px);
+        margin-top: calc(var(--cw) * -0.66px);
+        border-radius: calc(var(--cw) * 0.075px);
+        background-repeat: no-repeat;
+        background-size: 200% 200%;
+        box-shadow:
+          0 calc(var(--cw) * 0.03px) calc(var(--cw) * 0.09px) rgba(31, 36, 48, 0.16),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+        opacity: 0;
+        will-change: transform, opacity;
+      }
+
+      /* Process block */
+      .process {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        right: 0;
+        z-index: 4;
+        padding: 0 16px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .process.is-interactive {
+        pointer-events: auto;
+      }
+
+      .process-headline {
+        margin: 0;
+        font-size: var(--pfs);
+        font-weight: 500;
+        line-height: 1.12;
+        letter-spacing: -0.03em;
+        color: var(--ink);
+        text-wrap: balance;
+      }
+
+      .process-line {
+        display: block;
+      }
+
+      .pw {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(0.35em);
+        filter: blur(6px);
+        will-change: transform, opacity, filter;
+      }
+
+      .pw.m {
+        color: var(--muted);
+      }
+
+      .pw.chip {
+        width: 1.05em;
+        height: 0.92em;
+        border-radius: 0.16em;
+        vertical-align: -0.12em;
+        margin: 0 0.14em;
+        background-repeat: no-repeat;
+        background-size: 200% 200%;
+        background-position: 100% 0%;
+        box-shadow: 0 0.06em 0.18em rgba(31, 36, 48, 0.18);
+      }
+
+      .process-sub {
+        margin: calc(var(--pfs) * 0.42) 0 0;
+        font-size: calc(var(--pfs) * 0.27);
+        font-weight: 400;
+        color: var(--sub);
+        opacity: 0;
+        transform: translateY(8px);
+        will-change: transform, opacity;
+      }
+
+      .process-cta {
+        margin-top: calc(var(--pfs) * 0.38);
+        height: calc(var(--pfs) * 0.64);
+        font-size: calc(var(--pfs) * 0.25);
+        font-weight: 500;
+        padding: 0 calc(var(--pfs) * 0.28) 0 calc(var(--pfs) * 0.32);
+        border-radius: calc(var(--pfs) * 0.2);
+        background: var(--ink);
+        color: var(--bg);
+        border: 0;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: calc(var(--pfs) * 0.14);
+        text-decoration: none;
+        opacity: 0;
+        transform: translateY(8px);
+        will-change: transform, opacity;
+        transition: background-color 0.2s ease;
+      }
+
+      .process-cta:hover {
+        background: var(--cta-hover);
+      }
+
+      .process-cta svg {
+        width: calc(var(--pfs) * 0.26);
+        height: calc(var(--pfs) * 0.26);
+      }
+
+      /* Sky panel */
+      .sky {
+        position: absolute;
+        inset: 0;
+        z-index: 6;
+        overflow: hidden;
+        visibility: hidden;
+        opacity: 0;
+        background: var(--sky1);
+        pointer-events: none;
+        will-change: clip-path, opacity;
+      }
+
+      .sky-plate {
+        position: absolute;
+        inset: -4%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        will-change: transform;
+      }
+
+      .sky-video {
+        position: absolute;
+        left: -4%;
+        top: -4%;
+        width: 108%;
+        height: 108%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.7s ease;
+        will-change: transform, opacity;
+        pointer-events: none;
+      }
+
+      .sky-video.is-playing {
+        opacity: 0.78;
+      }
+
+      .sky-camera {
+        position: absolute;
+        left: 50%;
+        top: 51%;
+        width: var(--camw);
+        aspect-ratio: 1.094;
+        margin-left: calc(var(--camw) * -0.5);
+        margin-top: calc(var(--camw) * -0.457);
+        background-repeat: no-repeat;
+        filter: drop-shadow(0 calc(var(--camw) * 0.12) calc(var(--camw) * 0.08) rgba(60, 52, 70, 0.22));
+        transform-origin: 54% 31%;
+        will-change: transform;
+      }
+
+      .sky-words {
+        position: absolute;
+        font-size: var(--sfs);
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        line-height: 1.08;
+        color: var(--ink);
+        z-index: 2;
+      }
+
+      .sky-words-tl {
+        left: calc(var(--n) * 40px);
+        top: calc(var(--n) * 104px);
+      }
+
+      .sky-words-br {
+        right: calc(var(--n) * 40px);
+        bottom: calc(var(--n) * 46px);
+        text-align: right;
+      }
+
+      .sw {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(0.3em);
+        filter: blur(6px);
+        will-change: transform, opacity, filter;
+      }
+
+      .sw.g {
+        color: var(--sky-grey);
+      }
+
+      /* Blackout layer */
+      .blackout {
+        position: absolute;
+        inset: 0;
+        z-index: 8;
+        background: var(--dark);
+        opacity: 0;
+        pointer-events: none;
+        will-change: opacity;
+      }
+
+      /* Manifesto section */
+      #manifesto {
+        position: relative;
+        height: 440vh;
+        background: var(--dark);
+      }
+
+      .m-stage {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        height: 100svh;
+        overflow: hidden;
+        background: var(--dark);
+      }
+
+      .m-track {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: calc(var(--mfs) * 0.32);
+        white-space: nowrap;
+        font-size: var(--mfs);
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        line-height: 1.08;
+        color: #FFFFFF;
+        will-change: transform;
+      }
+
+      .m-word {
+        display: inline-flex;
+        flex-shrink: 0;
+      }
+
+      .m-word.grey {
+        color: var(--man-grey);
+      }
+
+      .m-ch {
+        display: inline-block;
+        white-space: pre;
+        transform-origin: bottom left;
+        opacity: 0;
+        transform: translateY(0.55em) rotate(14deg);
+        will-change: transform, opacity;
+      }
+
+      .m-intro {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 0.26em;
+        font-size: 0.72em;
+        flex-shrink: 0;
+        margin-right: 0.14em;
+      }
+
+      .m-intro-row {
+        display: flex;
+        align-items: baseline;
+        gap: 0.28em;
+      }
+
+      .m-sticker {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        font-size: calc(var(--mfs) * 0.42);
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        line-height: 1;
+        padding: 0.28em 0.62em 0.3em;
+        border-radius: 0.16em;
+        color: var(--ink);
+        box-shadow: 0 0.12em 0.3em rgba(0, 0, 0, 0.35);
+        flex-shrink: 0;
+        opacity: 0;
+        transform: scale(0) rotate(-14deg);
+        will-change: transform, opacity;
+      }
+
+      .m-sticker.sm {
+        font-size: calc(var(--mfs) * 0.24);
+        padding: 0.3em 0.6em;
+      }
+
+      .m-sticker.abs {
+        position: absolute;
+        z-index: 2;
+      }
+
+      .m-sticker-dot {
+        position: absolute;
+        top: 0.2em;
+        right: 0.22em;
+        width: 0.16em;
+        height: 0.16em;
+        border-radius: 50%;
+        background: var(--ink);
+      }
+
+      .m-stack {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.18em;
+        flex-shrink: 0;
+      }
+
+      .m-obj {
+        display: inline-block;
+        flex-shrink: 0;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transform: scale(0) rotate(-14deg);
+        will-change: transform, opacity;
+      }
+
+      .m-sparkle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 0.34em;
+        height: 0.34em;
+        flex-shrink: 0;
+        opacity: 0;
+        transform: scale(0) rotate(-14deg);
+        will-change: transform, opacity;
+      }
+
+      .m-sparkle svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .m-spacer {
+        width: 30vw;
+        flex-shrink: 0;
+      }
+
+      /* Mobile layout adjustments */
+      body.is-mobile .process {
+        top: 17%;
+      }
+
+      body.is-mobile .sky-words-tl {
+        left: 16px;
+        top: 84px;
+      }
+
+      body.is-mobile .sky-words-br {
+        right: 16px;
+        bottom: 28px;
+      }
+
+      /* Reduced motion */
+      @media (prefers-reduced-motion: reduce) {
+        #story,
+        #manifesto {
+          height: auto;
+        }
+        .stage,
+        .m-stage {
+          position: relative;
+          height: auto;
+          min-height: 100vh;
+          overflow: visible;
+        }
+        .hero {
+          position: relative;
+          height: 55vh;
+        }
+        .cards {
+          position: relative;
+          height: 50vh;
+        }
+        .process {
+          position: relative;
+          top: auto;
+          padding: 48px 16px;
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+        }
+        .pw,
+        .process-sub,
+        .process-cta,
+        .sw,
+        .nav-logo,
+        .nav-link {
+          opacity: 1 !important;
+          transform: none !important;
+          filter: none !important;
+        }
+        .nav-cta {
+          clip-path: none !important;
+        }
+        .sky {
+          position: relative;
+          height: 75vh;
+          visibility: visible !important;
+          opacity: 1 !important;
+          clip-path: none !important;
+        }
+        .m-stage {
+          padding: 96px 24px;
+        }
+        .m-track {
+          position: relative;
+          top: auto;
+          transform: none !important;
+          flex-wrap: wrap;
+          white-space: normal;
+        }
+        .m-ch,
+        .m-sticker,
+        .m-obj,
+        .m-sparkle {
+          opacity: 1 !important;
+        }
+        .m-ch {
+          transform: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav-logo" href="#top" aria-label="Syed Agency home">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <path d="M31.5 13.5C30.5 9.5 26.8 8.5 23.2 8.5C18.2 8.5 15 11.4 15 15.2C15 19.8 19.2 21.6 24.4 23.3C29.8 25.1 33.5 27.3 33.5 32.5C33.5 36.8 29.4 39.5 24 39.5C19.4 39.5 16 37.6 14.5 34.2" fill="none" stroke="currentColor" stroke-width="4.4" stroke-linecap="round" />
+          <circle cx="35.5" cy="11.5" r="3.2" fill="currentColor" />
+        </svg>
+      </a>
+
+      <div class="nav-links">
+        <a class="nav-link is-current" href="#top" data-nav="home">Home</a>
+        <a class="nav-link" href="#process" data-nav="team">Our Team</a>
+        <a class="nav-link" href="#process" data-nav="cases">Cases</a>
+        <a class="nav-link" href="#product" data-nav="features">Features</a>
+        <a class="nav-link" href="#product" data-nav="pricing">Pricing</a>
+        <a class="nav-link" href="#manifesto" data-nav="contact">Contact</a>
+      </div>
+
+      <a class="nav-cta" href="#collections" data-nav="collections">
+        <span>View Collections</span>
+        <svg viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+    </nav>
+
+    <section id="story">
+      <header class="hero">
+        <div class="hero-headline" role="heading" aria-level="1" aria-label="Syed Agency">
+          <div class="hero-words"></div>
+          <div class="hero-icons" aria-hidden="true"></div>
+        </div>
+        <div class="paper-plane" aria-hidden="true"></div>
+      </header>
+
+      <div class="stage">
+        <div class="cards" aria-hidden="true"></div>
+
+        <div class="process" id="process">
+          <h2 class="process-headline">
+            <span class="process-line">
+              <span class="pw m">From</span>
+              <span class="pw">vision</span>
+              <span class="pw chip" aria-hidden="true"></span>
+              <span class="pw m">to</span>
+              <span class="pw">product</span>
+            </span>
+            <span class="process-line">
+              <span class="pw">built</span>
+              <span class="pw m">through</span>
+              <span class="pw">real</span>
+              <span class="pw">process</span>
+            </span>
+          </h2>
+          <p class="process-sub">Turning concepts into working digital products.</p>
+          <a class="process-cta" href="#collections">
+            <span>View All Collections</span>
+            <svg viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="sky">
+          <div class="sky-plate"></div>
+          <video class="sky-video" muted loop playsinline preload="none"></video>
+          <div class="sky-camera" aria-hidden="true"></div>
+          <div class="sky-words sky-words-tl">
+            <span class="sw g">Not</span>
+            <span class="sw g">just</span>
+            <span class="sw">visuals</span>
+          </div>
+          <div class="sky-words sky-words-br">
+            <span class="sw">Real</span>
+            <span class="sw">products</span>
+            <span class="sw g">that</span>
+            <span class="sw">run</span>
+          </div>
+        </div>
+
+        <div class="blackout"></div>
+      </div>
+    </section>
+
+    <section id="manifesto" aria-label="Syed Agency Manifesto">
+      <div class="m-stage">
+        <div class="m-track"></div>
+      </div>
+    </section>
+
+    <script>
+      (function () {
+        'use strict';
+
+        var PREFIX = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/';
+        function proxy(file, w) {
+          return 'https://images.higgs.ai/?default=1&output=webp&url=' + encodeURIComponent(PREFIX + file) + '&w=' + w + '&q=85';
+        }
+
+        var ASSETS = {
+          gridA: proxy('hf_20261118_061436_77e1a13d-60a0-4746-bf7b-53b2365609f5.png', 900),
+          gridB: proxy('hf_20261118_061435_8a1828bc-a149-44ea-80fd-c4c33eef7407.png', 900),
+          gridC: proxy('hf_20261118_061433_df51e37b-d8b8-40b1-9830-01ea6c20c83d.png', 900),
+          chipC: proxy('hf_20261118_061433_df51e37b-d8b8-40b1-9830-01ea6c20c83d.png', 300),
+          skyPlate: proxy('hf_20261118_061434_a222c9d2-715b-44b7-873f-0548d1624211.png', 2400),
+          skyVideo: PREFIX + 'hf_20261118_065029_a6ae2ebb-cd79-41fd-ae60-6b66fdda04ee.mp4',
+          camera: proxy('hf_20261118_061547_10365665-40d3-4390-944f-7bcb10dc6d4a.png', 1400),
+          stickersPlane: proxy('hf_20261118_061547_979f8673-f904-4102-90a0-6458bce33bc8.png', 1200),
+          stickers: proxy('hf_20261118_061547_979f8673-f904-4102-90a0-6458bce33bc8.png', 700)
+        };
+
+        var CROPS = {
+          plane: [0.594, 0.613, 0.891, 0.816],
+          conch: [0.109, 0.121, 0.430, 0.422],
+          pearl: [0.625, 0.152, 0.863, 0.395],
+          capsule: [0.094, 0.656, 0.418, 0.793],
+          camera: [0.148, 0.141, 0.879, 0.809]
+        };
+
+        function applyCrop(el, url, box) {
+          var x0 = box[0], y0 = box[1], x1 = box[2], y1 = box[3];
+          var dx = x1 - x0;
+          var dy = y1 - y0;
+          el.style.backgroundImage = 'url("' + url + '")';
+          el.style.backgroundSize = (100 / dx).toFixed(4) + '% ' + (100 / dy).toFixed(4) + '%';
+          var px = dx === 1 ? 0 : (x0 / (1 - dx)) * 100;
+          var py = dy === 1 ? 0 : (y0 / (1 - dy)) * 100;
+          el.style.backgroundPosition = px.toFixed(4) + '% ' + py.toFixed(4) + '%';
+          el.style.aspectRatio = (dx / dy).toFixed(4);
+        }
+
+        // Utilities
+        function clamp(v, min, max) {
+          return v < min ? min : v > max ? max : v;
+        }
+        function lerp(a, b, t) {
+          return a + (b - a) * t;
+        }
+        function eOutCubic(t) {
+          t = clamp(t, 0, 1);
+          var inv = 1 - t;
+          return 1 - inv * inv * inv;
+        }
+        function eInOutCubic(t) {
+          t = clamp(t, 0, 1);
+          return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+        function eBackOut(t, s) {
+          t = clamp(t, 0, 1);
+          if (s === undefined) s = 1.15;
+          var t1 = t - 1;
+          return 1 + t1 * t1 * ((s + 1) * t1 + s);
+        }
+        function cubicBezier(x1, y1, x2, y2) {
+          return function (x) {
+            x = clamp(x, 0, 1);
+            if (x === 0 || x === 1) return x;
+            var lo = 0, hi = 1, t = x;
+            for (var i = 0; i < 12; i++) {
+              t = (lo + hi) * 0.5;
+              var u = 1 - t;
+              var bx = 3 * u * u * t * x1 + 3 * u * t * t * x2 + t * t * t;
+              if (bx < x) lo = t;
+              else hi = t;
+            }
+            var u2 = 1 - t;
+            return 3 * u2 * u2 * t * y1 + 3 * u2 * t * t * y2 + t * t * t;
+          };
+        }
+        var eGlide = cubicBezier(0.25, 0.75, 0.2, 1);
+
+        var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var finePointer = window.matchMedia('(pointer: fine)').matches;
+
+        // DOM references
+        var rootStyle = document.documentElement.style;
+        var navLogo = document.querySelector('.nav-logo');
+        var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-link'));
+        var navCta = document.querySelector('.nav-cta');
+        var storyEl = document.getElementById('story');
+        var heroEl = document.querySelector('.hero');
+        var heroHeadlineEl = document.querySelector('.hero-headline');
+        var heroWordsEl = document.querySelector('.hero-words');
+        var heroIconsEl = document.querySelector('.hero-icons');
+        var planeEl = document.querySelector('.paper-plane');
+        var cardsWrap = document.querySelector('.cards');
+        var processEl = document.querySelector('.process');
+        var processWords = Array.prototype.slice.call(document.querySelectorAll('.process .pw'));
+        var processSub = document.querySelector('.process-sub');
+        var processCta = document.querySelector('.process-cta');
+        var chipEl = document.querySelector('.pw.chip');
+        var skyEl = document.querySelector('.sky');
+        var skyPlateEl = document.querySelector('.sky-plate');
+        var skyVideoEl = document.querySelector('.sky-video');
+        var skyCamEl = document.querySelector('.sky-camera');
+        var skyWords = Array.prototype.slice.call(document.querySelectorAll('.sky .sw'));
+        var blackoutEl = document.querySelector('.blackout');
+        var manifestoEl = document.getElementById('manifesto');
+        var mTrackEl = document.querySelector('.m-track');
+
+        // Apply static image assets
+        chipEl.style.backgroundImage = 'url("' + ASSETS.chipC + '")';
+        skyPlateEl.style.backgroundImage = 'url("' + ASSETS.skyPlate + '")';
+        applyCrop(skyCamEl, ASSETS.camera, CROPS.camera);
+        applyCrop(planeEl, ASSETS.stickersPlane, CROPS.plane);
+
+        if (!reducedMotion) {
+          skyVideoEl.src = ASSETS.skyVideo;
+          skyVideoEl.playbackRate = 1.0;
+          skyVideoEl.addEventListener('playing', function () {
+            skyVideoEl.classList.add('is-playing');
+          });
+        }
+
+        // Build hero headline characters & 7 pixel icons
+        var TITLE = 'Syed Agency';
+        var charEls = [];
+        var nonSpaceIndices = [];
+        for (var ci = 0; ci < TITLE.length; ci++) {
+          var ch = TITLE.charAt(ci);
+          var span = document.createElement('span');
+          span.className = 'hero-char';
+          span.textContent = ch;
+          heroWordsEl.appendChild(span);
+          charEls.push(span);
+          if (ch !== ' ') nonSpaceIndices.push(ci);
+        }
+
+        var PIXEL_PALETTE = {
+          k: '#1F2430',
+          b: '#7DA3BB',
+          w: '#FFFFFF',
+          p: '#DDAD95'
+        };
+        var PIXEL_ICONS = [
+          // 0: paper plane
+          [
+            '........k',
+            '......kkb',
+            '....kkwkb',
+            '..kkwwkb.',
+            'kkwwwkbb.',
+            '..kkkbb..',
+            '....kb...',
+            '....k....',
+            '.........'
+          ],
+          // 1: scallop shell
+          [
+            '...kkk...',
+            '..kbwbk..',
+            '.kbwbwbk.',
+            'kbwbwbwbk',
+            'kwbwbwbwk',
+            '.kbwbwbk.',
+            '..kbbbk..',
+            '...kkk...',
+            '.........'
+          ],
+          // 2: sailboat
+          [
+            '....k....',
+            '....kb...',
+            '....kbb..',
+            '...wkbbb.',
+            '..wwkbbb.',
+            '....k....',
+            'kkkkkkkkk',
+            '.kpppppk.',
+            '..kkkkk..'
+          ],
+          // 3: lighthouse
+          [
+            '...kkk...',
+            '..kbbbk..',
+            '...kwk...',
+            '...kbk...',
+            '...kwk...',
+            '...kbk...',
+            '..kwwwk..',
+            '..kbbbk..',
+            '.kkkkkkk.'
+          ],
+          // 4: fish
+          [
+            '.........',
+            '...kkk..k',
+            '..kbbbkkk',
+            '.kbwbbbbk',
+            'kbbbbbkkk',
+            '.kbbbbk.k',
+            '..kkkk...',
+            '.........',
+            '.........'
+          ],
+          // 5: wave
+          [
+            '.........',
+            '...kkk...',
+            '..kbbbk..',
+            '.kbwwbbk.',
+            'kbw..kbbk',
+            'kb....kbk',
+            'bbbbbbbbb',
+            'kkkkkkkkk',
+            '.........'
+          ],
+          // 6: sun
+          [
+            '....p....',
+            '.p..k..p.',
+            '...kpk...',
+            '..kpppk..',
+            'pkpppppkp',
+            '..kpppk..',
+            '...kpk...',
+            '.p..k..p.',
+            '....p....'
+          ]
+        ];
+
+        var iconEls = [];
+        for (var ii = 0; ii < PIXEL_ICONS.length; ii++) {
+          var wrap = document.createElement('div');
+          wrap.className = 'hero-icon';
+          var grid = PIXEL_ICONS[ii];
+          var rects = '';
+          for (var r = 0; r < 9; r++) {
+            var rowStr = grid[r];
+            for (var c = 0; c < 9; c++) {
+              var cell = rowStr.charAt(c);
+              if (cell !== '.') {
+                rects += '<rect x="' + c + '" y="' + r + '" width="1.02" height="1.02" fill="' + PIXEL_PALETTE[cell] + '"/>';
+              }
+            }
+          }
+          wrap.innerHTML = '<svg viewBox="0 0 9 9" shape-rendering="crispEdges">' + rects + '</svg>';
+          heroIconsEl.appendChild(wrap);
+          iconEls.push(wrap);
+        }
+
+        // Build 12 cards
+        var CARD_CELLS = [
+          [ASSETS.gridB, '100% 100%'], // 0 B-BR
+          [ASSETS.gridA, '100% 0%'],   // 1 A-TR
+          [ASSETS.gridA, '0% 100%'],   // 2 A-BL
+          [ASSETS.gridA, '100% 100%'], // 3 A-BR
+          [ASSETS.gridB, '0% 0%'],     // 4 B-TL
+          [ASSETS.gridB, '100% 0%'],   // 5 B-TR
+          [ASSETS.gridC, '100% 0%'],   // 6 C-TR
+          [ASSETS.gridC, '0% 0%'],     // 7 C-TL
+          [ASSETS.gridB, '0% 100%'],   // 8 B-BL
+          [ASSETS.gridA, '0% 0%'],     // 9 A-TL
+          [ASSETS.gridC, '0% 100%'],   // 10 C-BL
+          [ASSETS.gridC, '100% 100%']  // 11 C-BR
+        ];
+        var ENTRANCE_DELAYS = [0.30, 0.34, 0.29, 0.38, 0.42, 0.26];
+        var cardEls = [];
+        var cardStates = [];
+        for (var k = 0; k < 12; k++) {
+          var cd = document.createElement('div');
+          cd.className = 'card';
+          cd.style.backgroundImage = 'url("' + CARD_CELLS[k][0] + '")';
+          cd.style.backgroundPosition = CARD_CELLS[k][1];
+          cardsWrap.appendChild(cd);
+          cardEls.push(cd);
+          cardStates.push({ x: 0, y: 0, rot: 0, scale: 1, op: 0, init: false });
+        }
+
+        // Build Manifesto track
+        var mItems = []; // { el, type: 'word'|'sticker', chars?: [], restRot?: number, revealed: false, revealAt: 0 }
+
+        function createWord(text, isGrey, parent) {
+          var wEl = document.createElement('span');
+          wEl.className = 'm-word' + (isGrey ? ' grey' : '');
+          var chars = [];
+          for (var i = 0; i < text.length; i++) {
+            var chEl = document.createElement('span');
+            chEl.className = 'm-ch';
+            chEl.textContent = text.charAt(i);
+            wEl.appendChild(chEl);
+            chars.push(chEl);
+          }
+          (parent || mTrackEl).appendChild(wEl);
+          mItems.push({ el: wEl, type: 'word', chars: chars, revealed: false, revealAt: 0 });
+          return wEl;
+        }
+
+        function createSticker(text, bg, rot, opts, parent) {
+          opts = opts || {};
+          var sEl = document.createElement('span');
+          sEl.className = 'm-sticker' + (opts.small ? ' sm' : '') + (opts.abs ? ' abs' : '');
+          sEl.style.background = bg;
+          if (opts.top) sEl.style.top = opts.top;
+          if (opts.left) sEl.style.left = opts.left;
+          if (opts.bottom) sEl.style.bottom = opts.bottom;
+          sEl.textContent = text;
+          if (opts.dot) {
+            var d = document.createElement('span');
+            d.className = 'm-sticker-dot';
+            sEl.appendChild(d);
+          }
+          (parent || mTrackEl).appendChild(sEl);
+          mItems.push({ el: sEl, type: 'sticker', restRot: rot, revealed: false, revealAt: 0 });
+          return sEl;
+        }
+
+        function createObj(cropBox, widthEm, rot) {
+          var oEl = document.createElement('span');
+          oEl.className = 'm-obj';
+          oEl.style.width = widthEm + 'em';
+          applyCrop(oEl, ASSETS.stickers, cropBox);
+          mTrackEl.appendChild(oEl);
+          mItems.push({ el: oEl, type: 'sticker', restRot: rot, revealed: false, revealAt: 0 });
+          return oEl;
+        }
+
+        function createSparkle() {
+          var sp = document.createElement('span');
+          sp.className = 'm-sparkle';
+          sp.innerHTML = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 0c.8 5.6 3.6 8.6 10 10-6.4 1.4-9.2 4.4-10 10-.8-5.6-3.6-8.6-10-10 6.4-1.4 9.2-4.4 10-10z" fill="#F4E3D3"/></svg>';
+          mTrackEl.appendChild(sp);
+          mItems.push({ el: sp, type: 'sticker', restRot: 0, revealed: false, revealAt: 0 });
+          return sp;
+        }
+
+        // 1. Intro block
+        var introBlock = document.createElement('div');
+        introBlock.className = 'm-intro';
+        var row1 = document.createElement('div');
+        row1.className = 'm-intro-row';
+        createWord('Designing', true, row1);
+        createWord('motion', false, row1);
+        var row2 = document.createElement('div');
+        row2.className = 'm-intro-row';
+        createWord('that', false, row2);
+        createWord('moves', false, row2);
+        createWord('people.', true, row2);
+        introBlock.appendChild(row1);
+        introBlock.appendChild(row2);
+        createSticker('syed agency', '#EFCEBE', -6, { small: true, abs: true, top: 'calc(var(--mfs) * -0.684)', left: '0' }, introBlock);
+        createSticker('crafted in motion', '#EBC9AE', -4, { small: true, abs: true, top: 'calc(var(--mfs) * -0.792)', left: 'calc(var(--mfs) * 2.448)' }, introBlock);
+        createSticker('concept to launch', '#BAD9E6', 4, { small: true, abs: true, bottom: 'calc(var(--mfs) * -0.72)', left: 'calc(var(--mfs) * 0.432)' }, introBlock);
+        mTrackEl.appendChild(introBlock);
+
+        // 2. Conch shell
+        createObj(CROPS.conch, 1.25, -12);
+        // 3. "Crafting"
+        createWord('Crafting', true);
+        // 4. Vertical stack
+        var stackEl = document.createElement('div');
+        stackEl.className = 'm-stack';
+        createSticker('bold', '#DDAD95', -8, { dot: true }, stackEl);
+        createSticker('and immersive', '#B0AEC6', 6, { small: true }, stackEl);
+        mTrackEl.appendChild(stackEl);
+        // 5. "animation" "experiences."
+        createWord('animation', true);
+        createWord('experiences.', false);
+        // 6. Sparkle, pearl .8em
+        createSparkle();
+        createObj(CROPS.pearl, 0.8, 0);
+        // 7. "Syed" "Agency" "–" "is" "a"
+        createWord('Syed', false);
+        createWord('Agency', false);
+        createWord('–', true);
+        createWord('is', true);
+        createWord('a', true);
+        // 8. "kinetic" #EFCEBE (-8°), conch 1.05em (+10°), pearl .5em, sparkle, "digital" #B0AEC6 (+3°)
+        createSticker('kinetic', '#EFCEBE', -8);
+        createObj(CROPS.conch, 1.05, 10);
+        createObj(CROPS.pearl, 0.5, 0);
+        createSparkle();
+        createSticker('digital', '#B0AEC6', 3);
+        // 9. "and" "a", "modern" #BAD9E6 (-10°), capsule 1.05em (-8°)
+        createWord('and', true);
+        createWord('a', true);
+        createSticker('modern', '#BAD9E6', -10);
+        createObj(CROPS.capsule, 1.05, -8);
+        // 10. "studio" ... "technology." + 30vw spacer
+        createWord('studio', false);
+        createWord('that', false);
+        createWord('brings', false);
+        createWord('brands,', false);
+        createWord('stories,', false);
+        createWord('and', true);
+        createWord('experiences', false);
+        createWord('to', true);
+        createWord('life', true);
+        createWord('through', true);
+        createWord('art,', false);
+        createWord('design,', false);
+        createWord('and', true);
+        createWord('technology.', false);
+        var spacerEl = document.createElement('div');
+        spacerEl.className = 'm-spacer';
+        mTrackEl.appendChild(spacerEl);
+
+        // Layout metrics & sizing
+        var M = {
+          W: 1440,
+          H: 900,
+          mobile: false,
+          u: 1,
+          n: 1,
+          hfs: 106,
+          ic: 66,
+          pfs: 48,
+          sfs: 60,
+          mfs: 72,
+          camw: 274,
+          cw: 218,
+          navH: 86,
+          charWidths: [],
+          prefixWidths: [],
+          trackWidth: 0,
+          storyTop: 0,
+          storyHeight: 0,
+          manifestoTop: 0,
+          manifestoHeight: 0
+        };
+
+        function measure() {
+          var W = window.innerWidth;
+          var H = window.innerHeight;
+          var mobile = W < 820 && W < H * 1.1;
+          var u = Math.min(W / 1440, H / 800);
+          var n = mobile ? Math.min(1, W / 560) : clamp(W / 1440, 0.62, 1.25);
+          var hfs = mobile ? Math.min(W * 0.12, H * 0.09) : Math.min(W * 0.074, H * 0.135);
+          var ic = hfs * 0.62;
+          var pfs = mobile ? Math.min(W * 0.085, 40) : Math.min(W * 0.0335, H * 0.062);
+          var sfs = mobile ? Math.min(W * 0.09, 44) : Math.min(W * 0.042, H * 0.078);
+          var mfs = mobile ? Math.min(W * 0.11, H * 0.075) : Math.min(W * 0.05, H * 0.1);
+          var camw = mobile ? Math.min(W * 0.62, H * 0.34) : Math.min(W * 0.19, H * 0.36);
+          var cw = mobile ? Math.min(W * 0.30, H * 0.2) : Math.min(W / 1440, H / 780) * 218;
+
+          M.W = W;
+          M.H = H;
+          M.mobile = mobile;
+          M.u = u;
+          M.n = n;
+          M.hfs = hfs;
+          M.ic = ic;
+          M.pfs = pfs;
+          M.sfs = sfs;
+          M.mfs = mfs;
+          M.camw = camw;
+          M.cw = cw;
+          M.navH = 86 * n;
+
+          document.body.classList.toggle('is-mobile', mobile);
+          rootStyle.setProperty('--u', u + 'px');
+          rootStyle.setProperty('--n', String(n));
+          rootStyle.setProperty('--hfs', hfs + 'px');
+          rootStyle.setProperty('--ic', ic + 'px');
+          rootStyle.setProperty('--pfs', pfs + 'px');
+          rootStyle.setProperty('--sfs', sfs + 'px');
+          rootStyle.setProperty('--mfs', mfs + 'px');
+          rootStyle.setProperty('--camw', camw + 'px');
+          cardsWrap.style.setProperty('--cw', String(cw));
+
+          // Measure hero character widths
+          M.charWidths = [];
+          M.prefixWidths = [0];
+          var total = 0;
+          for (var i = 0; i < charEls.length; i++) {
+            var w = charEls[i].getBoundingClientRect().width;
+            M.charWidths.push(w);
+            total += w;
+            M.prefixWidths.push(total);
+          }
+
+          M.storyTop = storyEl.offsetTop;
+          M.storyHeight = storyEl.offsetHeight;
+          M.manifestoTop = manifestoEl.offsetTop;
+          M.manifestoHeight = manifestoEl.offsetHeight;
+          M.trackWidth = mTrackEl.scrollWidth;
+        }
+
+        measure();
+        window.addEventListener('resize', measure);
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(measure);
+        }
+
+        // Plane Catmull-Rom path (0.144s -> 0.72s)
+        var PLANE_PTS = [
+          [0.144, -3, 73],
+          [0.216, 4, 71],
+          [0.312, 13, 65],
+          [0.368, 22, 55],
+          [0.432, 31, 44],
+          [0.480, 32.5, 47.5],
+          [0.512, 26, 48],
+          [0.560, 21.5, 45],
+          [0.600, 22.5, 51.5],
+          [0.648, 27, 52]
+        ];
+
+        function evalPlane(t, slot0XPercent) {
+          var pts = PLANE_PTS.slice();
+          pts.push([0.72, slot0XPercent, 41]);
+          var seg = 0;
+          for (var i = 0; i < pts.length - 1; i++) {
+            if (t >= pts[i][0] && t <= pts[i + 1][0]) {
+              seg = i;
+              break;
+            }
+          }
+          if (t >= pts[pts.length - 1][0]) seg = pts.length - 2;
+
+          var p0 = pts[Math.max(0, seg - 1)];
+          var p1 = pts[seg];
+          var p2 = pts[seg + 1];
+          var p3 = pts[Math.min(pts.length - 1, seg + 2)];
+          var span = p2[0] - p1[0] || 0.001;
+          var u = clamp((t - p1[0]) / span, 0, 1);
+          var u2 = u * u;
+          var u3 = u2 * u;
+
+          var xPct = 0.5 * (
+            2 * p1[1] +
+            (-p0[1] + p2[1]) * u +
+            (2 * p0[1] - 5 * p1[1] + 4 * p2[1] - p3[1]) * u2 +
+            (-p0[1] + 3 * p1[1] - 3 * p2[1] + p3[1]) * u3
+          );
+          var yPct = 0.5 * (
+            2 * p1[2] +
+            (-p0[2] + p2[2]) * u +
+            (2 * p0[2] - 5 * p1[2] + 4 * p2[2] - p3[2]) * u2 +
+            (-p0[2] + 3 * p1[2] - 3 * p2[2] + p3[2]) * u3
+          );
+          var dxPct = 0.5 * (
+            (-p0[1] + p2[1]) +
+            2 * (2 * p0[1] - 5 * p1[1] + 4 * p2[1] - p3[1]) * u +
+            3 * (-p0[1] + 3 * p1[1] - 3 * p2[1] + p3[1]) * u2
+          );
+          var dyPct = 0.5 * (
+            (-p0[2] + p2[2]) +
+            2 * (2 * p0[2] - 5 * p1[2] + 4 * p2[2] - p3[2]) * u +
+            3 * (-p0[2] + 3 * p1[2] - 3 * p2[2] + p3[2]) * u2
+          );
+          var vx = (dxPct * M.W) / 100;
+          var vy = (dyPct * M.H) / 100;
+          var angle = Math.atan2(vy, vx) * (180 / Math.PI) + 18;
+          return { x: (xPct * M.W) / 100, y: (yPct * M.H) / 100, rot: angle };
+        }
+
+        // Card pose calculations
+        function cardStepDeg(R) {
+          return 2 * Math.asin(Math.min(0.99, (1.05 * M.cw) / (2 * R))) * (180 / Math.PI);
+        }
+
+        function getFanPose(i) {
+          if (i >= 6) return [M.W * 0.5, M.H * 1.4, 0, 1, 0];
+          var R = M.mobile ? M.W * 1.35 : (1250 * M.W) / 1440;
+          var step = cardStepDeg(R);
+          var deg = (i - 2.5) * step;
+          var rad = (deg * Math.PI) / 180;
+          var cx = M.mobile ? M.W * 0.5 : M.W * 0.55;
+          var cy = M.H * 0.86 + R;
+          var x = cx + R * Math.sin(rad) - (M.mobile ? 0 : M.W * 0.02);
+          var y = cy - R * Math.cos(rad) + (M.mobile ? M.cw * 0.2 : 0);
+          return [x, y, deg, 1, 1];
+        }
+
+        var SCATTER_DESKTOP = [
+          [0.08, 0.46, -20],
+          [0.20, 0.86, -12],
+          [0.80, 0.84, 14],
+          [0.38, 1.04, -8],
+          [0.92, 0.42, 16],
+          [0.62, 1.04, 9]
+        ];
+        var SCATTER_MOBILE = [
+          [0.06, 0.60, -20],
+          [0.45, 0.66, 12],
+          [0.94, 0.60, 16],
+          [0.22, 0.93, -14],
+          [0.72, 0.96, 9],
+          [0.50, 1.30, 0]
+        ];
+
+        function getScatterPose(i) {
+          if (i >= 6) return [M.W * 0.5, M.H * 1.4, 0, 1, 0];
+          var arr = M.mobile ? SCATTER_MOBILE : SCATTER_DESKTOP;
+          var sx = arr[i][0];
+          var sy = arr[i][1];
+          if (M.H < 500 && sy < 0.1) sy += 0.08;
+          return [sx * M.W, sy * M.H, arr[i][2], 1, 1];
+        }
+
+        function getPilePose(i) {
+          var x = M.W * 0.5 + ((i % 3) - 1) * M.cw * 0.08;
+          var y = M.H * 0.62 + (((i * 7) % 5) - 2) * M.cw * 0.04;
+          var rot = (i % 2 === 0 ? 1 : -1) * (4 + i * 1.3);
+          return [x, y, rot, 1, 1];
+        }
+
+        function getWheelPose(i, rotOffset) {
+          var rawSlot = (((i + rotOffset) % 12) + 12) % 12 - 5.5;
+          var R = M.mobile ? M.W * 1.2 : (900 * M.W) / 1440;
+          var step = cardStepDeg(R);
+          var deg = rawSlot * step;
+          var rad = (deg * Math.PI) / 180;
+          var cx = M.W * 0.5;
+          var cy = (M.mobile ? M.H * 0.76 : M.H * 0.82) + R;
+          var x = cx + R * Math.sin(rad);
+          var y = cy - R * Math.cos(rad);
+          var op = Math.abs(deg) < 62 ? 1 : 0;
+          return [x, y, deg, 1, op];
+        }
+
+        function lerpPose(a, b, t) {
+          return [
+            lerp(a[0], b[0], t),
+            lerp(a[1], b[1], t),
+            lerp(a[2], b[2], t),
+            lerp(a[3], b[3], t),
+            lerp(a[4], b[4], t)
+          ];
+        }
+
+        // Smooth scroll state
+        var ty = window.scrollY;
+        var sy = window.scrollY;
+        var lastWheelAt = -Infinity;
+
+        function maxScrollY() {
+          return Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+        }
+
+        function jumpTo(targetY) {
+          var y = clamp(targetY, 0, maxScrollY());
+          ty = y;
+          sy = y;
+          lastWheelAt = -Infinity;
+          for (var i = 0; i < cardStates.length; i++) {
+            cardStates[i].init = false;
+          }
+          var storyRange = Math.max(1, M.storyHeight - M.H);
+          var jumpP = clamp((y - M.storyTop) / storyRange, 0, 1);
+          if (jumpP >= 0.62) {
+            skyGateOpen = true;
+            skyDisp = clamp((jumpP - 0.62) / (0.74 - 0.62), 0, 1);
+          } else {
+            skyGateOpen = false;
+            skyDisp = 0;
+          }
+          window.scrollTo(0, y);
+        }
+
+        window.addEventListener('wheel', function (e) {
+          if (reducedMotion || !finePointer) return;
+          if (e.ctrlKey) return;
+          e.preventDefault();
+          var dy = e.deltaMode === 1 ? e.deltaY * 32 : e.deltaY;
+          ty = clamp(ty + dy * 1.55, 0, maxScrollY());
+          lastWheelAt = performance.now();
+          window.scrollTo(0, ty);
+        }, { passive: false });
+
+        // Navigation links
+        function scrollStoryPct(pct) {
+          var range = Math.max(1, M.storyHeight - M.H);
+          jumpTo(M.storyTop + range * pct);
+        }
+
+        document.querySelector('.nav-logo').addEventListener('click', function (e) {
+          e.preventDefault();
+          jumpTo(0);
+        });
+        navLinks.forEach(function (link) {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+            var k = link.getAttribute('data-nav');
+            if (k === 'home') jumpTo(0);
+            else if (k === 'team' || k === 'cases') scrollStoryPct(0.20);
+            else if (k === 'features' || k === 'pricing') scrollStoryPct(0.74);
+            else if (k === 'contact') jumpTo(M.manifestoTop);
+          });
+        });
+        navCta.addEventListener('click', function (e) {
+          e.preventDefault();
+          scrollStoryPct(0.45);
+        });
+        processCta.addEventListener('click', function (e) {
+          e.preventDefault();
+          scrollStoryPct(0.45);
+        });
+
+        // Animation state
+        var loadStart = performance.now();
+        var prevFrame = loadStart;
+        var processRevealStart = null;
+        var processDone = false;
+        var skyRevealStart = null;
+        var skyWordsDone = false;
+        var skyDisp = 0;
+        var skyGateOpen = false;
+        var headlineDone = false;
+
+        // Helper for step layout of Hero headline + 7 icons
+        function getHeroGroupLayout(charsCount, iconsCount) {
+          var textW = M.prefixWidths[charsCount] || 0;
+          var iconGap = 0.2 * M.ic;
+          var sepGap = 1.6 * iconGap;
+          var totalW = textW;
+          if (iconsCount > 0) {
+            totalW += (charsCount > 0 ? sepGap : 0) + iconsCount * M.ic + (iconsCount - 1) * iconGap;
+          }
+          var groupLeft = (M.W - totalW) * 0.5;
+          var iconsLeft = groupLeft + textW + (charsCount > 0 ? sepGap : 0);
+          return {
+            groupLeft: groupLeft,
+            iconsLeft: iconsLeft,
+            iconStep: M.ic + iconGap
+          };
+        }
+
+        function updateHeroLoad(t) {
+          if (headlineDone && !reducedMotion) return;
+
+          // Nav logo & links
+          if (reducedMotion) {
+            navLogo.style.opacity = '1';
+            navLinks.forEach(function (l) {
+              l.style.opacity = '1';
+              l.style.transform = 'none';
+            });
+            navCta.style.clipPath = 'inset(0 0% 0 0 round ' + (12 * M.n) + 'px)';
+          } else {
+            navLogo.style.opacity = String(eOutCubic((t - 0.064) / 0.128));
+            for (var i = 0; i < navLinks.length; i++) {
+              var lt = eOutCubic((t - (0.08 + i * 0.02)) / 0.128);
+              navLinks[i].style.opacity = String(lt);
+              navLinks[i].style.transform = 'translateY(' + (6 * (1 - lt)).toFixed(2) + 'px)';
+            }
+            var ctaT = eOutCubic((t - 0.112) / 0.112);
+            navCta.style.clipPath = 'inset(0 0 0 ' + ((1 - ctaT) * 100).toFixed(2) + '% round ' + (12 * M.n).toFixed(2) + 'px)';
+          }
+
+          if (reducedMotion) {
+            var finalLay = getHeroGroupLayout(TITLE.length, 0);
+            heroWordsEl.style.transform = 'translate3d(' + finalLay.groupLeft.toFixed(2) + 'px, -50%, 0)';
+            for (var c = 0; c < charEls.length; c++) {
+              charEls[c].style.clipPath = 'inset(0 0% 0 0)';
+            }
+            planeEl.style.opacity = '0';
+            for (var j = 0; j < iconEls.length; j++) iconEls[j].style.opacity = '0';
+            return;
+          }
+
+          var baseLay = getHeroGroupLayout(0, 7);
+          var slot0CenterX = baseLay.iconsLeft + M.ic * 0.5;
+          var slot0XPct = (slot0CenterX / M.W) * 100;
+
+          // Paper plane (0.144 -> 0.72, fade 0.72 -> 0.76)
+          if (t < 0.144 || t > 0.76) {
+            planeEl.style.opacity = '0';
+          } else if (t <= 0.72) {
+            var pl = evalPlane(t, slot0XPct);
+            planeEl.style.opacity = String(clamp((t - 0.144) / 0.04, 0, 1));
+            planeEl.style.transform = 'translate3d(' + pl.x.toFixed(2) + 'px, ' + pl.y.toFixed(2) + 'px, 0) translate(-50%, -50%) rotate(' + pl.rot.toFixed(2) + 'deg)';
+          } else {
+            var fadeT = (t - 0.72) / 0.04;
+            var sc = lerp(1, 0.6, fadeT);
+            var plEnd = evalPlane(0.72, slot0XPct);
+            planeEl.style.opacity = String(1 - fadeT);
+            planeEl.style.transform = 'translate3d(' + plEnd.x.toFixed(2) + 'px, ' + plEnd.y.toFixed(2) + 'px, 0) translate(-50%, -50%) rotate(' + plEnd.rot.toFixed(2) + 'deg) scale(' + sc.toFixed(3) + ')';
+          }
+
+          // Hero headline & icons
+          var morphStart = 1.024;
+          var stepDur = 0.104;
+          var totalSteps = TITLE.length; // 11
+
+          if (t < morphStart) {
+            heroWordsEl.style.transform = 'translate3d(' + baseLay.groupLeft.toFixed(2) + 'px, -50%, 0)';
+            for (var c0 = 0; c0 < charEls.length; c0++) {
+              charEls[c0].style.clipPath = 'inset(0 100% 0 0)';
+            }
+            for (var j0 = 0; j0 < 7; j0++) {
+              var iStart = j0 === 0 ? 0.72 : 0.72 + 0.016 + (j0 - 1) * 0.036;
+              var ix = baseLay.iconsLeft + j0 * baseLay.iconStep;
+              if (t < iStart) {
+                iconEls[j0].style.opacity = '0';
+              } else {
+                var elapsed = t - iStart;
+                var op = j0 === 0 ? 1 : clamp(elapsed / 0.072, 0, 1);
+                var sPop = j0 === 0 ? 1 : eBackOut(elapsed / 0.176, 1.15);
+                iconEls[j0].style.opacity = String(op);
+                iconEls[j0].style.filter = 'brightness(1)';
+                iconEls[j0].style.transform = 'translate3d(' + ix.toFixed(2) + 'px, 0, 0) scale(' + sPop.toFixed(3) + ')';
+              }
+            }
+          } else {
+            var rawStep = Math.floor((t - morphStart) / stepDur);
+            if (rawStep >= totalSteps) {
+              headlineDone = true;
+              var endLay = getHeroGroupLayout(totalSteps, 0);
+              heroWordsEl.style.transform = 'translate3d(' + endLay.groupLeft.toFixed(2) + 'px, -50%, 0)';
+              for (var c1 = 0; c1 < charEls.length; c1++) {
+                charEls[c1].style.clipPath = 'inset(0 0% 0 0)';
+              }
+              for (var j1 = 0; j1 < 7; j1++) {
+                iconEls[j1].style.opacity = '0';
+              }
+              return;
+            }
+
+            var stepIdx = rawStep;
+            var u = clamp((t - (morphStart + stepIdx * stepDur)) / stepDur, 0, 1);
+            var g = eGlide(u);
+
+            var lettersBefore = 0;
+            for (var lb = 0; lb < stepIdx; lb++) {
+              if (TITLE.charAt(lb) !== ' ') lettersBefore++;
+            }
+            var lettersAfter = lettersBefore + (TITLE.charAt(stepIdx) !== ' ' ? 1 : 0);
+            var totalLetters = nonSpaceIndices.length || 1;
+            var iconsBefore = Math.ceil((7 * (totalLetters - lettersBefore)) / totalLetters);
+            var iconsAfter = Math.ceil((7 * (totalLetters - lettersAfter)) / totalLetters);
+            var consumedIndex = iconsBefore > iconsAfter ? (7 - iconsBefore) : -1;
+
+            var layA = getHeroGroupLayout(stepIdx, iconsBefore);
+            var layB = getHeroGroupLayout(stepIdx + 1, iconsAfter);
+            var curGroupLeft = lerp(layA.groupLeft, layB.groupLeft, g);
+            heroWordsEl.style.transform = 'translate3d(' + curGroupLeft.toFixed(2) + 'px, -50%, 0)';
+
+            for (var cc = 0; cc < charEls.length; cc++) {
+              if (cc < stepIdx) {
+                charEls[cc].style.clipPath = 'inset(0 0% 0 0)';
+              } else if (cc === stepIdx) {
+                var wp = clamp((u - 0.28) / 0.60, 0, 1);
+                charEls[cc].style.clipPath = 'inset(0 ' + ((1 - wp) * 100).toFixed(2) + '% 0 0)';
+              } else {
+                charEls[cc].style.clipPath = 'inset(0 100% 0 0)';
+              }
+            }
+
+            var firstActiveAfter = 7 - iconsAfter;
+            var firstActiveBefore = 7 - iconsBefore;
+            for (var ji = 0; ji < 7; ji++) {
+              if (ji < firstActiveBefore) {
+                iconEls[ji].style.opacity = '0';
+              } else if (ji === consumedIndex) {
+                var oldX = layA.iconsLeft + (ji - firstActiveBefore) * layA.iconStep;
+                var sx, syI, rotI, brI, opI;
+                if (u <= 0.45) {
+                  var p1 = eOutCubic(u / 0.45);
+                  syI = lerp(1, 0.16, p1);
+                  sx = lerp(1, 1.25, p1);
+                  rotI = lerp(0, -28, p1);
+                  brI = lerp(1, 0, p1);
+                  opI = 1;
+                } else {
+                  var p2 = (u - 0.45) / 0.55;
+                  syI = 0.16;
+                  sx = 1.25;
+                  rotI = lerp(-28, -90, p2);
+                  brI = 0;
+                  opI = 1 - p2;
+                }
+                iconEls[ji].style.opacity = String(opI);
+                iconEls[ji].style.filter = 'brightness(' + brI.toFixed(3) + ')';
+                iconEls[ji].style.transform = 'translate3d(' + oldX.toFixed(2) + 'px, 0, 0) rotate(' + rotI.toFixed(2) + 'deg) scale(' + sx.toFixed(3) + ', ' + syI.toFixed(3) + ')';
+              } else {
+                var oldPos = layA.iconsLeft + (ji - firstActiveBefore) * layA.iconStep;
+                var newPos = layB.iconsLeft + (ji - firstActiveAfter) * layB.iconStep;
+                var curX = lerp(oldPos, newPos, g);
+                iconEls[ji].style.opacity = '1';
+                iconEls[ji].style.filter = 'brightness(1)';
+                iconEls[ji].style.transform = 'translate3d(' + curX.toFixed(2) + 'px, 0, 0)';
+              }
+            }
+          }
+        }
+
+        function tick(now) {
+          var dt = Math.min(50, Math.max(1, now - prevFrame));
+          prevFrame = now;
+          var t = (now - loadStart) / 1000;
+          var heroT = t * 0.45;
+
+          if (reducedMotion) {
+            updateHeroLoad(10);
+            for (var ri = 0; ri < 12; ri++) {
+              var fp = getFanPose(ri);
+              cardEls[ri].style.opacity = String(fp[4]);
+              cardEls[ri].style.transform = 'translate3d(' + fp[0].toFixed(2) + 'px, ' + fp[1].toFixed(2) + 'px, 0) rotate(' + fp[2].toFixed(2) + 'deg)';
+            }
+            requestAnimationFrame(tick);
+            return;
+          }
+
+          // Smooth scroll chase
+          if (!finePointer) {
+            sy = window.scrollY;
+            ty = sy;
+          } else {
+            if (now - lastWheelAt > 250) {
+              ty = window.scrollY;
+            }
+            var sk = 1 - Math.pow(1 - 0.24, dt / 16.67);
+            sy += (ty - sy) * sk;
+            if (Math.abs(ty - sy) < 0.25) sy = ty;
+          }
+
+          // Keep hero aligned with smoothed sy while native scroll moves section
+          heroEl.style.transform = 'translate3d(0, ' + (window.scrollY - sy).toFixed(2) + 'px, 0)';
+
+          // Hero headline opacity fade before nav
+          var heroTop = M.H * 0.41 - sy;
+          var fadeStart = M.navH + 1.9 * M.hfs;
+          var fadeEnd = M.navH + 0.55 * M.hfs;
+          var heroOp = clamp((heroTop - fadeEnd) / Math.max(1, fadeStart - fadeEnd), 0, 1);
+          heroHeadlineEl.style.opacity = String(heroOp);
+
+          updateHeroLoad(heroT);
+
+          // Story progress
+          var storyRange = Math.max(1, M.storyHeight - M.H);
+          var p = clamp((sy - M.storyTop) / storyRange, 0, 1);
+
+          // Nav dark mode & active link
+          var inDarkNav = p > 0.985 || sy >= M.manifestoTop - M.H * 0.1;
+          document.body.classList.toggle('dark-nav', inDarkNav);
+
+          var currentKey = 'home';
+          if (sy >= M.manifestoTop - M.H * 0.35) currentKey = 'contact';
+          else if (p >= 0.65) currentKey = 'features';
+          else if (p >= 0.12) currentKey = 'cases';
+          for (var nl = 0; nl < navLinks.length; nl++) {
+            var dk = navLinks[nl].getAttribute('data-nav');
+            navLinks[nl].classList.toggle('is-current', dk === currentKey);
+          }
+
+          // Target poses for 12 cards
+          var tScatter = eInOutCubic(clamp((p - 0.004) / (0.085 - 0.004), 0, 1));
+          var tPile = eInOutCubic(clamp((p - 0.21) / (0.31 - 0.21), 0, 1));
+          var tWheel = eGlide(clamp((p - 0.31) / (0.41 - 0.31), 0, 1));
+          var wheelTurn = eInOutCubic(clamp((p - 0.41) / (0.57 - 0.41), 0, 1));
+          var wheelRotOffset = -3 * wheelTurn;
+
+          var allCardsSettled = true;
+          for (var ci = 0; ci < 12; ci++) {
+            var target;
+            if (p <= 0.004) {
+              target = getFanPose(ci);
+            } else if (p < 0.21) {
+              target = lerpPose(getFanPose(ci), getScatterPose(ci), tScatter);
+            } else if (p < 0.31) {
+              var scP = getScatterPose(ci);
+              var piP = getPilePose(ci);
+              target = lerpPose(scP, piP, tPile);
+              if (ci >= 6) {
+                target[4] = tPile;
+              }
+            } else if (p < 0.41) {
+              target = lerpPose(getPilePose(ci), getWheelPose(ci, 0), tWheel);
+            } else {
+              target = getWheelPose(ci, wheelRotOffset);
+            }
+
+            // Apply load-in offset for hero cards 0..5 when at top
+            var finalTarget = target.slice();
+            var isDuringLoad = p <= 0.002 && heroT < 0.88;
+            if (ci < 6 && heroT < ENTRANCE_DELAYS[ci] + 0.4 && p <= 0.01) {
+              var ct = clamp((heroT - ENTRANCE_DELAYS[ci]) / 0.4, 0, 1);
+              if (heroT < ENTRANCE_DELAYS[ci]) {
+                finalTarget[1] = M.H + M.cw * 1.2;
+                finalTarget[2] = target[2] + 8;
+                finalTarget[4] = 0;
+              } else {
+                var cb = eBackOut(ct, 1.15);
+                finalTarget[1] = lerp(M.H + M.cw * 1.2, target[1], cb);
+                finalTarget[2] = lerp(target[2] + 8, target[2], cb);
+                finalTarget[4] = clamp(ct / 0.15, 0, 1);
+              }
+            }
+
+            var st = cardStates[ci];
+            if (!st.init || isDuringLoad || p < 0.002) {
+              st.x = finalTarget[0];
+              st.y = finalTarget[1];
+              st.rot = finalTarget[2];
+              st.scale = finalTarget[3];
+              st.op = finalTarget[4];
+              st.init = true;
+            } else {
+              if (Math.abs(finalTarget[2] - st.rot) > 90 && finalTarget[4] === 0 && st.op < 0.05) {
+                st.x = finalTarget[0];
+                st.y = finalTarget[1];
+                st.rot = finalTarget[2];
+              } else {
+                var w = 0.22 + (ci % 4) * 0.02;
+                var ck = 1 - Math.pow(1 - w, dt / 16.67);
+                st.x += (finalTarget[0] - st.x) * ck;
+                st.y += (finalTarget[1] - st.y) * ck;
+                st.rot += (finalTarget[2] - st.rot) * ck;
+                st.scale += (finalTarget[3] - st.scale) * ck;
+                st.op += (finalTarget[4] - st.op) * ck;
+              }
+            }
+
+            if (finalTarget[4] > 0.01 || st.op > 0.01) {
+              if (
+                Math.abs(st.x - finalTarget[0]) > 3 ||
+                Math.abs(st.y - finalTarget[1]) > 3 ||
+                Math.abs(st.rot - finalTarget[2]) > 1
+              ) {
+                allCardsSettled = false;
+              }
+            }
+
+            cardEls[ci].style.opacity = st.op.toFixed(3);
+            cardEls[ci].style.transform = 'translate3d(' + st.x.toFixed(2) + 'px, ' + st.y.toFixed(2) + 'px, 0) rotate(' + st.rot.toFixed(2) + 'deg) scale(' + st.scale.toFixed(3) + ')';
+          }
+
+          // Process block reveal & opacity
+          if (p < 0.05) {
+            processEl.style.opacity = '0';
+            processEl.style.visibility = 'hidden';
+            processEl.classList.remove('is-interactive');
+            processRevealStart = null;
+            processDone = false;
+            for (var pw0 = 0; pw0 < processWords.length; pw0++) {
+              processWords[pw0].style.opacity = '0';
+              processWords[pw0].style.transform = 'translateY(0.35em)';
+              processWords[pw0].style.filter = 'blur(6px)';
+            }
+            processSub.style.opacity = '0';
+            processSub.style.transform = 'translateY(8px)';
+            processCta.style.opacity = '0';
+            processCta.style.transform = 'translateY(8px)';
+          } else {
+            var pOp = p <= 0.075 ? (p - 0.05) / 0.025 : 1;
+            processEl.style.visibility = 'visible';
+            processEl.style.opacity = String(pOp);
+            processEl.classList.toggle('is-interactive', p > 0.075 && skyDisp < 0.5);
+
+            if (p > 0.078 && processRevealStart === null) {
+              processRevealStart = now;
+            }
+            if (processRevealStart !== null && !processDone) {
+              var pt = (now - processRevealStart) / 1000;
+              var allProcDone = true;
+              for (var pwi = 0; pwi < processWords.length; pwi++) {
+                var wp = eOutCubic((pt - pwi * 0.065) / 0.38);
+                if (wp < 1) allProcDone = false;
+                processWords[pwi].style.opacity = String(wp);
+                processWords[pwi].style.transform = 'translateY(' + ((1 - wp) * 0.35).toFixed(3) + 'em)';
+                processWords[pwi].style.filter = wp >= 0.995 ? 'none' : 'blur(' + ((1 - wp) * 6).toFixed(2) + 'px)';
+              }
+              var subP = eOutCubic((pt - 0.36) / 0.36);
+              if (subP < 1) allProcDone = false;
+              processSub.style.opacity = String(subP);
+              processSub.style.transform = 'translateY(' + ((1 - subP) * 8).toFixed(2) + 'px)';
+              var ctaP = eOutCubic((pt - 0.46) / 0.36);
+              if (ctaP < 1) allProcDone = false;
+              processCta.style.opacity = String(ctaP);
+              processCta.style.transform = 'translateY(' + ((1 - ctaP) * 8).toFixed(2) + 'px)';
+              if (allProcDone) processDone = true;
+            }
+          }
+
+          // Sky panel gating & growth (p: 0.62 -> 0.74)
+          var rawSky = clamp((p - 0.62) / (0.74 - 0.62), 0, 1);
+          var wheelDone = p >= 0.57;
+          if (p < 0.62 && skyDisp < 0.005) {
+            skyGateOpen = false;
+          } else if (rawSky > 0 && wheelDone && allCardsSettled) {
+            skyGateOpen = true;
+          }
+          var targetSky = skyGateOpen ? rawSky : 0;
+          var skyK = 1 - Math.pow(1 - 0.26, dt / 16.67);
+          skyDisp += (targetSky - skyDisp) * skyK;
+          if (Math.abs(targetSky - skyDisp) < 0.001) skyDisp = targetSky;
+
+            if (skyDisp <= 0.001) {
+            skyEl.style.visibility = 'hidden';
+            skyEl.style.opacity = '0';
+            if (!skyVideoEl.paused) skyVideoEl.pause();
+            skyRevealStart = null;
+            skyWordsDone = false;
+            for (var sw0 = 0; sw0 < skyWords.length; sw0++) {
+              skyWords[sw0].style.opacity = '0';
+              skyWords[sw0].style.transform = 'translateY(0.3em)';
+              skyWords[sw0].style.filter = 'blur(6px)';
+            }
+          } else {
+            skyEl.style.visibility = 'visible';
+            skyEl.style.opacity = '1';
+            if (skyVideoEl.paused && skyVideoEl.src) {
+              var playPromise = skyVideoEl.play();
+              if (playPromise && playPromise.catch) playPromise.catch(function () {});
+            }
+
+            var s = eInOutCubic(skyDisp);
+            var topI = lerp(M.mobile ? 36 : 28, 0, s);
+            var rightI = lerp(M.mobile ? 29 : 41.5, 0, s);
+            var bottomI = lerp(M.mobile ? 48 : 52, 0, s);
+            var leftI = lerp(M.mobile ? 29 : 41.5, 0, s);
+            var radI = lerp(14, 0, s);
+            skyEl.style.clipPath = 'inset(' + topI.toFixed(2) + '% ' + rightI.toFixed(2) + '% ' + bottomI.toFixed(2) + '% ' + leftI.toFixed(2) + '% round ' + radI.toFixed(2) + 'px)';
+
+            var bgScale = lerp(1.18, 1, s);
+            skyPlateEl.style.transform = 'scale(' + bgScale.toFixed(4) + ')';
+            skyVideoEl.style.transform = 'scale(' + bgScale.toFixed(4) + ')';
+
+            var panelCamScale = lerp(0.5, 1, s);
+            var yawP = clamp((p - 0.74) / (0.88 - 0.74), 0, 1);
+            var yawDeg = lerp(-10, 10, yawP);
+            var rawQ = clamp((p - 0.88) / (0.97 - 0.88), 0, 1);
+            var gateQ = clamp((skyDisp - 0.9) / 0.1, 0, 1);
+            var q = Math.pow(rawQ, 1.6) * gateQ;
+            var bob = Math.sin(t * 1.6) * 6 * M.n * (1 - clamp(rawQ * 2, 0, 1));
+            var lensScale = 1 + q * q * 28;
+            var totalCamScale = panelCamScale * lensScale;
+
+            skyCamEl.style.transform =
+              'translate3d(0, ' + bob.toFixed(2) + 'px, 0) perspective(900px) rotateY(' + yawDeg.toFixed(2) + 'deg) scale(' + totalCamScale.toFixed(4) + ')';
+
+            blackoutEl.style.opacity = String(clamp((q - 0.45) / (0.85 - 0.45), 0, 1));
+
+            if (skyDisp >= 0.98) {
+              if (skyRevealStart === null) skyRevealStart = now;
+              if (!skyWordsDone) {
+                var stSky = (now - skyRevealStart) / 1000;
+                var skyDelays = [0, 0.07, 0.14, 0.26, 0.33, 0.40, 0.47];
+                var allSkyDone = true;
+                for (var swi = 0; swi < skyWords.length; swi++) {
+                  var swp = eOutCubic((stSky - skyDelays[swi]) / 0.38);
+                  if (swp < 1) allSkyDone = false;
+                  skyWords[swi].style.opacity = String(swp);
+                  skyWords[swi].style.transform = 'translateY(' + ((1 - swp) * 0.3).toFixed(3) + 'em)';
+                  skyWords[swi].style.filter = swp >= 0.995 ? 'none' : 'blur(' + ((1 - swp) * 6).toFixed(2) + 'px)';
+                }
+                if (allSkyDone) skyWordsDone = true;
+              }
+            } else if (skyDisp < 0.7) {
+              skyRevealStart = null;
+              skyWordsDone = false;
+              for (var swr = 0; swr < skyWords.length; swr++) {
+                skyWords[swr].style.opacity = '0';
+                skyWords[swr].style.transform = 'translateY(0.3em)';
+                skyWords[swr].style.filter = 'blur(6px)';
+              }
+            }
+          }
+
+          // Manifesto horizontal scroll & reveal
+          var mRange = Math.max(1, M.manifestoHeight - M.H);
+          var mp = clamp((sy - M.manifestoTop) / mRange, 0, 1);
+          var startX = M.mobile ? M.W * 0.08 : M.W * 0.06;
+          var endX = -(M.trackWidth - M.W * 0.9);
+          var trackX = lerp(startX, endX, mp);
+          mTrackEl.style.transform = 'translate3d(' + trackX.toFixed(2) + 'px, -50%, 0)';
+
+          var mRectTop = M.manifestoTop - sy;
+          var triggerX = M.W * (M.mobile ? 0.95 : 0.90);
+          if (mRectTop <= M.H * 0.25) {
+            for (var mi = 0; mi < mItems.length; mi++) {
+              var it = mItems[mi];
+              if (it.done) continue;
+              if (!it.revealed) {
+                var itemLeft = it.el.getBoundingClientRect().left;
+                if (itemLeft <= triggerX) {
+                  it.revealed = true;
+                  it.revealAt = now;
+                }
+              }
+              if (it.revealed) {
+                var mt = (now - it.revealAt) / 1000;
+                if (it.type === 'word') {
+                  var allCharsDone = true;
+                  for (var chi = 0; chi < it.chars.length; chi++) {
+                    var cp = eOutCubic((mt - chi * 0.022) / 0.34);
+                    if (cp < 1) allCharsDone = false;
+                    var cy = lerp(0.55, 0, cp);
+                    var cr = lerp(14, 0, cp);
+                    it.chars[chi].style.opacity = String(cp);
+                    it.chars[chi].style.transform = 'translateY(' + cy.toFixed(3) + 'em) rotate(' + cr.toFixed(2) + 'deg)';
+                  }
+                  if (allCharsDone) it.done = true;
+                } else {
+                  var spT = (mt - 0.05) / 0.34;
+                  if (spT <= 0) {
+                    it.el.style.opacity = '0';
+                  } else {
+                    var scB = eBackOut(spT, 1.15);
+                    var rB = lerp(-14, it.restRot, eOutCubic(spT));
+                    it.el.style.opacity = String(clamp(spT / 0.2, 0, 1));
+                    it.el.style.transform = 'scale(' + scB.toFixed(3) + ') rotate(' + rB.toFixed(2) + 'deg)';
+                    if (spT >= 1) it.done = true;
+                  }
+                }
+              }
+            }
+          }
+
+          requestAnimationFrame(tick);
+        }
+
+        requestAnimationFrame(tick);
+      })();
+    </script>
+  </body>
+</html>

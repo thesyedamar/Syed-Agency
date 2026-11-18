@@ -1,0 +1,6 @@
+{
+  "name": "Tidewell — Tides in Motion",
+  "description": "A four-part scroll-story landing page for Tidewell, a coastal motion studio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
